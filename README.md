@@ -45,3 +45,21 @@ sql-data-quality-framework/
 ## License
 
 MIT License — free to use, modify, and distribute.
+
+## New: Referential Integrity Rules
+
+Validate foreign key relationships in your database:
+
+```sql
+-- Check customer_id referential integrity
+select * from rule_fk_customer_orders;
+
+-- Results show violation count and percentage
+-- Violations > 0 indicates orphaned records
+```
+
+Included Rules:
+- Foreign key validation (customers, products)
+- Temporal validity checks (future dates)
+- Aggregated violation reporting
+
